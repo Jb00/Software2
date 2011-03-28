@@ -1,7 +1,7 @@
 #include "Facilitystaff.h"
 
-FacilityStaff::FacilityStaff(int aId, QString aName, QString aFacility)
-    :User( aId,  aName, aFacility)
+FacilityStaff::FacilityStaff(int anId, QString aPassword, QString aName, QString aFacility)
+    :User( anId,  aName, aPassword,aFacility)
 {
     typeUser="FacilityStaff";  //Set the type of User
 }
@@ -9,4 +9,6 @@ FacilityStaff::FacilityStaff(int aId, QString aName, QString aFacility)
 FacilityStaff::~FacilityStaff()
 {
 }
+
+
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Mar 22 00:17:05 2011
+** Created: Sun Mar 27 18:11:03 2011
 **      by: Qt User Interface Compiler version 4.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -74,6 +74,10 @@ public:
     QLabel *lb_Name_2;
     QLabel *lb_Addr_2;
     QLabel *lb_Phone_2;
+    QPushButton *push_histo;
+    QPushButton *push_addFacility;
+    QPushButton *push_addUser;
+    QPushButton *push_Graph;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -116,7 +120,7 @@ public:
 
         layoutWidget_4 = new QWidget(frame);
         layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
-        layoutWidget_4->setGeometry(QRect(160, 20, 185, 95));
+        layoutWidget_4->setGeometry(QRect(160, 20, 192, 95));
         gridLayout_3 = new QGridLayout(layoutWidget_4);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -185,7 +189,7 @@ public:
         label->setGeometry(QRect(420, 10, 81, 21));
         layoutWidget_7 = new QWidget(centralWidget);
         layoutWidget_7->setObjectName(QString::fromUtf8("layoutWidget_7"));
-        layoutWidget_7->setGeometry(QRect(290, 200, 156, 128));
+        layoutWidget_7->setGeometry(QRect(290, 200, 164, 128));
         gridLayout_4 = new QGridLayout(layoutWidget_7);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -232,7 +236,7 @@ public:
         verticalScrollBar_2->setOrientation(Qt::Vertical);
         layoutWidget_9 = new QWidget(scrollAreaWidgetContents_2);
         layoutWidget_9->setObjectName(QString::fromUtf8("layoutWidget_9"));
-        layoutWidget_9->setGeometry(QRect(10, 10, 96, 100));
+        layoutWidget_9->setGeometry(QRect(10, 10, 104, 100));
         verticalLayout_4 = new QVBoxLayout(layoutWidget_9);
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -258,6 +262,18 @@ public:
         verticalLayout_4->addWidget(lb_Phone_2);
 
         scrollArea->setWidget(scrollAreaWidgetContents_2);
+        push_histo = new QPushButton(centralWidget);
+        push_histo->setObjectName(QString::fromUtf8("push_histo"));
+        push_histo->setGeometry(QRect(290, 340, 162, 27));
+        push_addFacility = new QPushButton(centralWidget);
+        push_addFacility->setObjectName(QString::fromUtf8("push_addFacility"));
+        push_addFacility->setGeometry(QRect(290, 370, 162, 27));
+        push_addUser = new QPushButton(centralWidget);
+        push_addUser->setObjectName(QString::fromUtf8("push_addUser"));
+        push_addUser->setGeometry(QRect(470, 370, 162, 27));
+        push_Graph = new QPushButton(centralWidget);
+        push_Graph->setObjectName(QString::fromUtf8("push_Graph"));
+        push_Graph->setGeometry(QRect(470, 340, 162, 27));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -297,6 +313,10 @@ public:
         lb_Name_2->setText(QApplication::translate("MainWindow", "Facility", 0, QApplication::UnicodeUTF8));
         lb_Addr_2->setText(QApplication::translate("MainWindow", "Address", 0, QApplication::UnicodeUTF8));
         lb_Phone_2->setText(QApplication::translate("MainWindow", "Phone number", 0, QApplication::UnicodeUTF8));
+        push_histo->setText(QApplication::translate("MainWindow", "Histogram", 0, QApplication::UnicodeUTF8));
+        push_addFacility->setText(QApplication::translate("MainWindow", "AddFacility", 0, QApplication::UnicodeUTF8));
+        push_addUser->setText(QApplication::translate("MainWindow", "AddUser", 0, QApplication::UnicodeUTF8));
+        push_Graph->setText(QApplication::translate("MainWindow", "Graph", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

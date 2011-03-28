@@ -1,7 +1,7 @@
 #include "Lhinstaff.h"
 
-LhinStaff::LhinStaff(int aId, QString aName, QString aFacility)
-        :User( aId,  aName, 0) //We set WorkAtFacility to 0 as LHIN Staff doesn't work to a facility
+LhinStaff::LhinStaff(int anId, QString aPassword, QString aName, QString aFacility)
+        :User( anId,aPassword,  aName, aFacility) //We set WorkAtFacility to 0 as LHIN Staff doesn't work to a facility
 {
     typeUser ="LhinStaff";
 }

@@ -6,7 +6,7 @@
 class LhinStaff : public User
 {
 public:
-    LhinStaff(int, QString, QString);
+    LhinStaff(int, QString, QString,QString);
     ~LhinStaff();
 };
 

@@ -4,13 +4,6 @@ DataController* DataController::anInstance =NULL;
 
 DataController::DataController()
 {
-    db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName ("127.0.0.1");
-    db.setDatabaseName ("EOBCSTORAGE");
-    db.setUserName ("root");
-    db.setPassword ("bobpw");
-    if (!db.open()) {}
-    /*    QMessageBox::warning(this, tr("Unable to open database"), tr("An error occured while "*/
 
 }
 
@@ -25,6 +18,14 @@ DataController* DataController::getInstance()
 
 void DataController::setupPatients(QList<Patient*> *aPatientList)
 {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName ("127.0.0.1");
+    db.setDatabaseName ("EOBCSTORAGE");
+    db.setUserName ("root");
+    db.setPassword ("bobpw");
+    if (!db.open()) {}
+    /*    QMessageBox::warning(this, tr("Unable to open database"), tr("An error occured while "*/
+
 
     QSqlQuery query;
 
@@ -49,15 +50,24 @@ void DataController::setupPatients(QList<Patient*> *aPatientList)
          dateAdmitted = query.value(4).toDate();
          occCare = query.value(5).toInt();
          reqCare = query.value(6).toInt();
+
          Patient * aPatient = new Patient(HealthCardNum, firstName,lastName,dateAdmitted,datePlacedOnWaitingList,reqCare,occCare);
          aPatientList->append(aPatient);
      }
-
-
+     query.clear();
+     db.close();
 }
 
 void DataController::setupFacility(QList<Facility *> *aFacilityList)
 {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName ("127.0.0.1");
+    db.setDatabaseName ("EOBCSTORAGE");
+    db.setUserName ("root");
+    db.setPassword ("bobpw");
+    if (!db.open()) {}
+    /*    QMessageBox::warning(this, tr("Unable to open database"), tr("An error occured while "*/
+
 
     int id,x,y;
     QString facilityName;
@@ -75,6 +85,8 @@ void DataController::setupFacility(QList<Facility *> *aFacilityList)
 
 
     }
+    query.clear();
+    db.close();
 }
 
 

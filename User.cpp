@@ -1,10 +1,11 @@
 #include "User.h"
 
-User::User(int aId, QString aName, QString aFacility)
+User::User(int anId, QString aPassword, QString aName, QString aFacility)
 {
-    id = aId;
+    id = anId;
     name = aName;
     workAtFacility = aFacility;
+    password = aPassword;
 }
 
 User::~User()

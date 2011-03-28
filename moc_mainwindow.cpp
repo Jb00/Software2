@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Tue Mar 22 13:30:06 2011
+** Created: Sun Mar 27 21:48:56 2011
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,13 +35,18 @@ static const uint qt_meta_data_MainWindow[] = {
       26,   11,   11,   11, 0x08,
       34,   11,   11,   11, 0x08,
       48,   11,   11,   11, 0x08,
+      59,   11,   11,   11, 0x08,
+      71,   11,   11,   11, 0x08,
+      79,   11,   11,   11, 0x08,
+      93,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0addBedClick()\0addWL()\0"
-    "assignToBed()\0dataTest()\0"
+    "assignToBed()\0dataTest()\0histogram()\0"
+    "graph()\0addFacility()\0addUser()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -77,9 +82,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: addWL(); break;
         case 2: assignToBed(); break;
         case 3: dataTest(); break;
+        case 4: histogram(); break;
+        case 5: graph(); break;
+        case 6: addFacility(); break;
+        case 7: addUser(); break;
         default: ;
         }
-        _id -= 4;
+        _id -= 8;
     }
     return _id;
 }

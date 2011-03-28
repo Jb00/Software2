@@ -14,6 +14,5 @@ DataDb::DataDb()
 
 void DataDb::startFacility(QList<Patient*> aListPatient)
 {
-
 }
 

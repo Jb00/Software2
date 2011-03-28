@@ -15,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent) :
      connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(addWL()));
      connect(ui->pushButton_7, SIGNAL(clicked()),this,SLOT(assignToBed()));
      connect(ui->pushButton_8, SIGNAL(clicked()),this,SLOT(dataTest()));
+     connect(ui->push_histo, SIGNAL(clicked()),this,SLOT(histogram()));
+     connect(ui->push_addFacility, SIGNAL(clicked()),this,SLOT(addFacility()));
+     connect(ui->push_addUser, SIGNAL(clicked()),this,SLOT(addUser()));
+     connect(ui->push_Graph, SIGNAL(clicked()),this,SLOT(graph()));
 
 
 
@@ -72,6 +76,7 @@ void MainWindow::addBedClick()
 
 void MainWindow::assignToBed()
 {
+    qDebug() <<listOfFacility.size();
     Hospital aHospitalTest();
     LongTermCare aLTC();
     QString aString= "Acute"; // ONLY USE FOR TESTING FOR ADDTOBED NEED A STRING
@@ -82,13 +87,45 @@ void MainWindow::assignToBed()
 
 }
 
-void MainWindow::dataTest()
+void MainWindow::dataTest() // TO ADD USER? BUT BART MIGHT HAVE DONE IT, STILL DO IT
 {
     DataController::getInstance()->setupPatients(&listOfPatient);
     DataController::getInstance()->setupFacility(&listOfFacility);
     std::cout << listOfPatient.size();
-    std::cout << listOfFacility.size();
+    std::cout << "FACILITY : "<< listOfFacility.size();
 
-    qDebug() << (listOfPatient.at(2)->getFName());
-    qDebug() << (listOfFacility.at(3)->getName());
+//    qDebug() << (listOfPatient.at(2)->getFName());
+//    qDebug() << (listOfFacility.at(3)->getName());
+}
+
+void MainWindow::histogram()
+{
+//    ReportController::getInstance()->setupHistogram();
+    ReportController::getInstance()->mismatchCCCLTC();
+}
+
+void MainWindow::graph()
+{
+    ReportController::getInstance()->setupGraph();
+}
+
+void MainWindow::addFacility()
+{
+ //   qDebug() <<"ADDFACILITY" <<listOfFacility.size();
+    aNewFacility = new NewFacility();
+    CreateNewFacilityController::getInstance()->setList(&listOfFacility);
+
+    aNewFacility->show(); //will be done in Map control
+    //Wait untill it gets close.
+    // then
+    //    CreateNewFacilityController::getInstance()->createFacility(&listOfFacility);
+    //then reset all fields
+}
+
+void MainWindow::addUser()
+{
+    qDebug() <<"test";
+    aNewUser = new NewUser();
+    CreateNewUserController::getInstance()->setList(&listOfUser);
+    aNewUser->show();
 }

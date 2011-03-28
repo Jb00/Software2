@@ -14,7 +14,7 @@ private :
         DataController();
         static DataController* anInstance;
         QList<Patient*> listPatient;
-        QSqlDatabase db;
+  //      QSqlDatabase db;
 public:
         static DataController* getInstance();
         void setupPatients(QList<Patient*>*);

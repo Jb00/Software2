@@ -16,9 +16,10 @@ class User
         QString typeUser;
         int id;
         QString workAtFacility;
+        QString password;
 
 public:
-        User(int, QString, QString);
+        User(int, QString, QString,QString);
         ~User();
 
         int getId();

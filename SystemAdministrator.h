@@ -5,7 +5,7 @@
 class SystemAdministrator : public User
 {
 public:
-    SystemAdministrator(int, QString, QString);
+    SystemAdministrator(int, QString, QString,QString);
     ~SystemAdministrator();
 };
 
